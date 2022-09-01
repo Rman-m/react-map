@@ -1,42 +1,51 @@
+import "./App.css";
+import DrawLine from "./DrawLine"
 
-import MapGL from 'react-map-gl';
-import MapDraw from './MapDraw';
-import "./App.css"
-import 'mapbox-gl/dist/mapbox-gl.css';
+const MARKERS = [
+	{
+		id: 1,
+		cordinates:[89, 56],
+		edges: [2,3,4]
+	},
+	{
+		id: 2,
+		cordinates:[89, 40],
+		edges: [3,4],
 
-const MAPBOX_TOKEN = '';
+	},
+	{
+		id:3,
+		cordinates:[21, 67],
+		edges: [4]
+	},
+	{
+		id: 4,
+		cordinates:[20, 43],
+		edges: []
+	},
 
-function App() {
+	{
+		id: 5,
+		cordinates:[-45, 56],
+		edges: [6,7,8]
+	},
+	{
+		id: 6,
+		cordinates:[-89, 40],
+		edges: [7,8],
 
-  function updateHandler(e){
-    console.log(e)
-  }
-  function create(e) {
-    console.log(e)
-  }
-  return (
-    <div className="container">
-       <MapGL
-      initialViewState={{
-        latitude: 48,
-        longitude: 10,
-        zoom: 4
-      }}
-      style={{width: 800, height: 600}}
-      mapStyle="mapbox://styles/fehide2029/cl78803tr000014jvnffickxs"
-      mapboxAccessToken={MAPBOX_TOKEN}
-    >
-      <MapDraw  
-        position="top-left"
-        displayControlsDefault={false}
-        onUpdate={updateHandler}
-        onCreate={create}
-        renderWorldCopies={false}
-        defaultMode="draw_polygon"
-        />
-    </MapGL>
-    </div>
-   
-  );
-}
-export default App
+	},
+	{
+		id:7,
+		cordinates:[-21, 67],
+		edges: [8]
+	},
+	{
+		id: 8,
+		cordinates:[-20, 43],
+		edges: []
+	},
+];
+
+const  App = ()=> <DrawLine markers= {MARKERS}/>
+export default App;
