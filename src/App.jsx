@@ -1,5 +1,5 @@
 import "./App.css";
-import DrawLine from "./DrawLine"
+import DrawLine from "./marker/DrawLine"
 
 const MARKERS = [
 	{

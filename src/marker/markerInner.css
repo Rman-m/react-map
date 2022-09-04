@@ -1,0 +1,6 @@
+.marker-img{
+    color: antiquewhite;
+    width: 30px;
+    aspect-ratio: 1/1;
+    transform: translateY(4px)
+}
